@@ -1,0 +1,117 @@
+body {
+    background-color: pink;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: palevioletred;
+    text-shadow: 2px 2px 5px red;
+}
+
+button {
+    background-color: white;
+    border: 2px solid red;
+    color: red;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: red;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.gallery-img {
+    width: 500px; /* Adjust to desired size */
+    height: 500px; /* Adjust to desired size */
+    object-fit: cover;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+
+.gallery-img:hover {
+    transform: scale(1.2);
+    border-color:green;
+}
+
+#image-description {
+    margin-top: 20px;
+    font-size: 18px;
+    color: black;
+    text-shadow: 1px 1px 2px purple;
+}
+
+#final-message {
+    font-family: 'Arial', sans-serif; /* Readable font */
+    font-size: 50px; /* Adjust size as needed */
+    color: #800080; /* Purple color */
+    text-align: center; /* Optional, to center the text */
+    line-height: 1.5; /* Optional, adjusts spacing between lines */
+    margin: 20px; /* Optional, adds space around the text */
+    text-shadow: 2px 2px 5px #ff69b4; /* Pink outline effect */
+}
+
+
+
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.heart {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    animation: float 4s infinite;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.centered-image {
+    position: fixed;
+    top: 50%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+}
+
+.centered-image img {
+    max-width: 90%;  /* Adjust to fit the screen */
+    height: auto;    /* Maintain aspect ratio */
+}
